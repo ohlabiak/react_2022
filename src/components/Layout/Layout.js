@@ -1,9 +1,9 @@
 import css from './style.module.css';
 
 const Layout = ({title, descr}) => {
-    const divStyle = {
-        backgroundImage: 'url()',
-    };
+    // const divStyle = {
+    //     backgroundImage: 'url()',
+    // };
     return (
         <div>
             <section className="root">

@@ -4,16 +4,15 @@ import {Layout} from "./components/Layout/Layout";
 import Footer from "./components/Footer/Footer";
 
 import bg1 from './assest/bg1.jpg';
-
-console.log(bg1);
+import bg2 from '
 
 function App() {
   return (
      <div>
-      <Header title="This is title" descr="This is Description!"/>
-      <Layout title={"This is title"} descr={"This is Description!"}/>
-      <Layout/>
-      <Layout />
+      <Header title="Header title" descr="Title Description!"/>
+      <Layout title="Layout 1 Title" descr="Description 1" urlBg={bg1}/>
+      <Layout title="Layout 2 Title" descr="Description 2" colorBg="#e2e2e2"/>
+      <Layout title="Layout 3 Title" descr="Description 3" urlBg={bg2}/>
       <Footer/>
     </div>
   );
