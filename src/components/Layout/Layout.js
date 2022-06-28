@@ -1,12 +1,17 @@
 import css from './style.module.css';
 
-const Layout = ({title, descr}) => {
-    // const divStyle = {
-    //     backgroundImage: 'url()',
-    // };
+console.log(css)
+const Layout = ({title, descr, urlBg, colorBg}) => {
+
+    const bgStyle = urlBg
+        ? {backgroundImage: `url(${urlBg})`}
+        : {backgroundColor: colorBg}
+
     return (
         <div>
-            <section className="root">
+            <section className={css.root}
+                     style={bgStyle}
+            >
                 <div className="wrapper">
                     <article>
                         <div className="title">
