@@ -5,9 +5,9 @@ import {ReactComponent as ReactLogo} from "../../assets/Stars.svg";
 const Header = ({title, descr}) => {
     return (
         <div>
-            <header className="root">
-                <div className="forest"></div>
-                <div className="container">
+            <header className={css.root}>
+                <div className={css.forest}></div>
+                <div className={css.container}>
                     <h1>{title}</h1>
                     <p>{descr}</p>
                 </div>
@@ -16,4 +16,4 @@ const Header = ({title, descr}) => {
     );
 };
 
-export {Header};
+export default Header;
