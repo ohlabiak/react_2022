@@ -18,8 +18,7 @@ const Layout = ({title, descr, urlBg, colorBg}) => {
                             </h3>
                             <span className={css.separator}></span>
                         </div>
-                        <div className={css.desc }
-                             className={css.full}
+                        <div className={`${css.desc} ${css.full}`}
                         >
                             <p>
                                 {descr}
