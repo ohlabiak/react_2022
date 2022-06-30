@@ -1,10 +1,11 @@
 import './App.css';
-import {Header} from "./components/Header/Header";
-import {Layout} from "./components/Layout/Layout";
+import './index.css';
+import Header from "./components/Header/Header";
+import Layout from "./components/Layout/Layout";
 import Footer from "./components/Footer/Footer";
 
-import bg1 from './assest/bg1.jpg';
-import bg2 from '
+import bg1 from './assets/bg1.jpg';
+import bg2 from './assets/bg2.jpg';
 
 function App() {
   return (
