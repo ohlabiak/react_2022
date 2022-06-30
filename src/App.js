@@ -6,6 +6,7 @@ import Footer from "./components/Footer/Footer";
 
 import bg1 from './assets/bg1.jpg';
 import bg2 from './assets/bg2.jpg';
+import PokemonCard from "./components/PokemonCard/PokemonCard";
 
 const POKEMONS = [
     [
@@ -149,7 +150,13 @@ function App() {
      <div>
       <Header title="Pokemon Game" descr="Title Description!"/>
       <Layout title="Layout 1 Title" descr="Description 1" urlBg={bg1}/>
-      <Layout title="Layout 2 Title" descr="Description 2" colorBg="#e2e2e2"/>
+      <Layout title="Layout 2 Title" descr="Description 2" colorBg="#e2e2e2">
+          <div className={flex}>
+              {
+                  POKEMONS.map(item) => <PokemonCard key={item.id} {...item} />)
+              }
+          </div>
+      </Layout>
       <Layout title="Layout 3 Title" descr="Description 3" urlBg={bg2}/>
       <Footer/>
     </div>
