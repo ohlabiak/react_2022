@@ -1,4 +1,4 @@
-import css from './App.css';
+import css from './App.module.css';
 import './index.css';
 import Header from "./components/Header/Header";
 import Layout from "./components/Layout/Layout";
@@ -144,6 +144,7 @@ const POKEMONS = [
 ]
 
 function App() {
+  console.log({css})
   return (
      <div>
       <Header title="Pokemon Game" descr="Title Description!"/>
