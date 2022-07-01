@@ -11,10 +11,10 @@ const PokemonCard = ({name, img, id, type, values}) => {
     }
     return (
         <div className={css.root} onClick={handleClick}>
-            <div className={`${css.pokemonCard} ${css.active}`}>
+            <div className={`${css.pokemonCard} ${isActive ? css.active : "" }`}>
                 <div className={css.cardFront}>
                     <div className={`${css.wrap} ${css.front}`}>
-                        <div className={`{${css.pokemon} ${css[type]}`}>
+                        <div className={`${css.pokemon} ${css[type]}`}>
                             <div className={css.values}>
                                 <div className={`${css.count} ${css.top}`}>{values.top}</div>
                                 <div className={`${css.count} ${css.right}`}>{values.right}</div>
@@ -22,7 +22,7 @@ const PokemonCard = ({name, img, id, type, values}) => {
                                 <div className={`${css.count} ${css.left}`}>{values.left}</div>
                             </div>
                             <div className={css.imgContainer}>
-                                <img src={img} alt="{name}"/>
+                                <img src={img} alt={name}/>
                             </div>
                             <div className={css.info}>
                                 <span className={css.number}>#{id}</span>
