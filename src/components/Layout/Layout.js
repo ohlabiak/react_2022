@@ -1,11 +1,9 @@
 import css from './style.module.css';
 
-const Layout = ({title, descr, urlBg, colorBg, ...props}) => {
-    console.log('####: props', props);
+const Layout = ({title, descr, urlBg, colorBg, children}) => {
     const bgStyle = urlBg
         ? {backgroundImage: `url(${urlBg})`}
         : {backgroundColor: colorBg}
-
 
     return (
         <div>
@@ -23,6 +21,9 @@ const Layout = ({title, descr, urlBg, colorBg, ...props}) => {
                             <p>
                                 {descr}
                             </p>
+                            <div>
+                                {children}
+                            </div>
                         </div>
                     </article>
                 </div>
