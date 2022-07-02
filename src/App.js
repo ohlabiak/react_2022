@@ -144,7 +144,6 @@ const POKEMONS = [
 ]
 
 function App() {
-  console.log({css})
   return (
      <div>
       <Header title="Pokemon Game" descr="Title Description!"/>
