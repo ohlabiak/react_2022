@@ -13,7 +13,7 @@ const PokemonCard = ({name, img, id, type, values}) => {
     }
     return (
         <div className={css.root} onClick={handleClick}>
-            <div className={`${css.pokemonCard} ${isActive ? css.active : "" }`}>
+            <div className={cn(css.pokemonCard, {[css.active] : isActive})}>
                 <div className={css.cardFront}>
                     <div className={cn(css.wrap, css.front)}>
                         <div className={(css.pokemon, css[type])}>

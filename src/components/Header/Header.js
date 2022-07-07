@@ -4,7 +4,7 @@ import {logDOM} from "@testing-library/react";
 const Header = ({title, descr, onClickButton}) => {
     const handleClick = () =>{
     console.log('####: <Header />');
-        onClickButton && onClickButton();
+        onClickButton && onClickButton('game');
     }
     return (
         <div>
@@ -14,9 +14,7 @@ const Header = ({title, descr, onClickButton}) => {
                     <h1>{title}</h1>
                     <p>{descr}</p>
 
-                    <button onClick={handleClick}>
-                        Start Game
-                    </button>
+                    <button onClick={handleClick}>Start Game</button>
 
                 </div>
             </header>

@@ -1,15 +1,11 @@
 
-const GamePage = () => {
-    const backClick = () => {
-      
+const GamePage = ({onChangePage}) => {
+    const handleClickButton = (page) => {
+        onChangePage && onChangePage();
     }
     return (
         <div>
-            This is Game Page!!!
-
-            <button onClick={backClick}>
-                Back to Home Page
-            </button>
+            <button onClick={handleClick}>To Home Page</button>
         </div>
     );
 };
