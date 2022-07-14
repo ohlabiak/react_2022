@@ -6,7 +6,7 @@
     "configurations": [
         {
             "command": "npm run start",
-            "name": "npm start",
+            "name": "pok: npm start",
             "request": "launch",
             "type": "node-terminal",
             "skipFiles": [
@@ -16,7 +16,7 @@
           {
             "type": "chrome",
             "request": "launch",
-            "name": "SSite: Launch in browser",
+            "name": "pok: Launch in browser",
             "url": "http://localhost:3000",
           },
     ]

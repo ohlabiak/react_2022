@@ -1,10 +1,9 @@
-import css from './style.module.css'
+import css from "./style.module.css";
 
-const Header = ({title, descr, onClickButton}) => {
-    const handleClick = () =>{
-    console.log('####: <Header />');
-        onClickButton && onClickButton('game');
-    }
+const Header = ({ title, descr, onClickButton }) => {
+    const handleClick = () => {
+        onClickButton && onClickButton("game");
+    };
     return (
         <div>
             <header className={css.root}>
@@ -14,7 +13,6 @@ const Header = ({title, descr, onClickButton}) => {
                     <p>{descr}</p>
 
                     <button onClick={handleClick}>Start Game</button>
-
                 </div>
             </header>
         </div>
