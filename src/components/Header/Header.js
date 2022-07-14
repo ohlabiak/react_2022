@@ -1,7 +1,5 @@
 import css from './style.module.css'
 
-import {ReactComponent as ReactLogo} from "../../assets/Stars.svg";
-
 const Header = ({title, descr}) => {
     return (
         <div>
