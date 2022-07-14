@@ -7,7 +7,7 @@ const App = () => {
 
     const handleChangePage = (page) => {
         console.log('####: <Main/>', page);
-        setPage('page');
+        setPage(page);
     };
     
     switch (page){

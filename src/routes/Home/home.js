@@ -149,7 +149,7 @@ const HomePage = ({onChangePage}) => {
     const handleClickButton = (page) =>{
 
         console.log('####: <HomePage/>')
-        onChangePage && onChangePage();
+        onChangePage && onChangePage(page);
     }
     return (
         <div>

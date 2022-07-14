@@ -1,5 +1,4 @@
 import css from './style.module.css'
-import {logDOM} from "@testing-library/react";
 
 const Header = ({title, descr, onClickButton}) => {
     const handleClick = () =>{

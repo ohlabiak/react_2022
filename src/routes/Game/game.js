@@ -1,11 +1,14 @@
+import css from "./style.module.css";
 
 const GamePage = ({onChangePage}) => {
-    const handleClickButton = (page) => {
-        onChangePage && onChangePage();
+    const handleClick = (page) => {
+        onChangePage && onChangePage('app');
     }
     return (
-        <div>
-            <button onClick={handleClick}>To Home Page</button>
+        <div className={css.root}>
+            <div className={css.container}>
+                <button onClick={handleClick}>To Home Page</button>
+            </div>
         </div>
     );
 };
