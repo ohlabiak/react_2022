@@ -2,12 +2,12 @@ import Header from "../../components/Header/Header";
 import Layout from "../../components/Layout/Layout";
 import Footer from "../../components/Footer/Footer";
 import PokemonCard from "../../components/PokemonCard/PokemonCard";
+import MenuHeader from "../../components/MenuHeader/MenuHeader";
 
 import bg1 from "../../assets/bg1.jpg";
 import bg2 from "../../assets/bg2.jpg";
 
 import css from "./style.module.css";
-import MenuHeader from "../../components/MenuHeader/Menu";
 
 const POKEMONS = [
     {
