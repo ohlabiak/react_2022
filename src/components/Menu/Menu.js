@@ -6,7 +6,7 @@ import css from "./style.module.css";
 const MENU = [
     {
         title: "HOME",
-        to: "home",
+        to: "",
     },
     {
         title: "GAME",
@@ -23,18 +23,18 @@ const MENU = [
 ];
 
 const Menu = ({ isOpen, onMenuOpenClose }) => {
-    const handleClick = (event) => {
-        onMenuOpenClose && onMenuOpenClose();
-    };
+    // const handleClick = () => {
+    //     onMenuOpenClose && onMenuOpenClose();
+    // };
     return (
         <div
             className={cn(css.menuContainer, {
-                [css.active]: isOpen === true,
+                [css.active]: isOpen,
                 [css.deactive]: isOpen === false,
             })}
         >
             <div className={css.overlay} />
-            <div className={css.menuItems} onClick={handleClick}>
+            <div className={css.menuItems} onClick={onMenuOpenClose}>
                 <div>
                     <ul>
                         {MENU.map((menu) => (
