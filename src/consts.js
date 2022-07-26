@@ -1,15 +1,4 @@
-import Header from "../../components/Header/Header";
-import Layout from "../../components/Layout/Layout";
-import Footer from "../../components/Footer/Footer";
-import PokemonCard from "../../components/PokemonCard/PokemonCard";
-
-import bg1 from "../../assets/bg1.jpg";
-import bg2 from "../../assets/bg2.jpg";
-
-import css from "./style.module.css";
-import MenuHeader from "../../components/MenuHeader/Menu";
-
-const POKEMONS = [
+export const POKEMONS = [
     {
         abilities: ["keen-eye", "tangled-feet", "big-pecks"],
         stats: {
@@ -127,34 +116,4 @@ const POKEMONS = [
     },
 ];
 
-const HomePage = ({ onChangePage }) => {
-    const handleClickButton = (page) => {
-        onChangePage && onChangePage(page);
-    };
-    return (
-        <div>
-            <MenuHeader onMenuClickButton={handleClickButton} />
-            <Header
-                title="Pokemon Game"
-                descr="Title Description!"
-                onClickButton={handleClickButton}
-            />
-            <Layout title="Layout 1 Title" descr="Description 1" urlBg={bg1} />
-            <Layout
-                title="Layout 2 Title"
-                descr="Description 2"
-                colorBg="#e2e2e2"
-            >
-                <div className={css.flex}>
-                    {POKEMONS.map((item) => (
-                        <PokemonCard key={item.id} {...item} />
-                    ))}
-                </div>
-            </Layout>
-            <Layout title="Layout 3 Title" descr="Description 3" urlBg={bg2} />
-            <Footer />
-        </div>
-    );
-};
-
-export default HomePage;
+export default POKEMONS;

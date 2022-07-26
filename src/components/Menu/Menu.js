@@ -1,36 +1,49 @@
 import cn from "classnames";
+import { Link } from "react-router-dom";
 
 import css from "./style.module.css";
 
-const Menu = ({ isActive, onClickButon, onMenuClickButton }) => {
-    const handleClick = (event) => {
-        onClickButon && onClickButon();
-        const { href } = event.target;
-        onMenuClickButton && onMenuClickButton(href.split("#")[1]);
-    };
+const MENU = [
+    {
+        title: "HOME",
+        to: "",
+    },
+    {
+        title: "GAME",
+        to: "game",
+    },
+    {
+        title: "ABOUT",
+        to: "about",
+    },
+    {
+        title: "CONTACT",
+        to: "contact",
+    },
+];
+
+const Menu = ({ isOpen, onMenuOpenClose }) => {
+    // const handleClick = () => {
+    //     onMenuOpenClose && onMenuOpenClose();
+    // };
     return (
         <div
             className={cn(css.menuContainer, {
-                [css.active]: isActive,
-                [css.deactive]: isActive === false,
+                [css.active]: isOpen,
+                [css.deactive]: isOpen === false,
             })}
         >
             <div className={css.overlay} />
-            <div className={css.menuItems} onClick={handleClick}>
-                <ul>
-                    <li>
-                        <a href="#welcome">HOME</a>
-                    </li>
-                    <li>
-                        <a href="#game">GAME</a>
-                    </li>
-                    <li>
-                        <a href="#about">ABOUT</a>
-                    </li>
-                    <li>
-                        <a href="#contact">CONTACT</a>
-                    </li>
-                </ul>
+            <div className={css.menuItems} onClick={onMenuOpenClose}>
+                <div>
+                    <ul>
+                        {MENU.map((menu) => (
+                            <li key={menu.to}>
+                                <Link to={menu.to} children={menu.title} />
+                            </li>
+                        ))}
+                    </ul>
+                </div>
             </div>
         </div>
     );
